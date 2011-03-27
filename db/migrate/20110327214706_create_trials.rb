@@ -3,7 +3,7 @@ class CreateTrials < ActiveRecord::Migration
     create_table :trials do |t|
       t.integer :event_id
       t.integer :bib
-      t.text :gender
+      t.string :gender
       t.datetime :start
       t.datetime :end
 

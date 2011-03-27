@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20110327214706) do
   create_table "trials", :force => true do |t|
     t.integer  "event_id"
     t.integer  "bib"
-    t.text     "gender"
+    t.string   "gender"
     t.datetime "start"
     t.datetime "end"
     t.datetime "created_at"
