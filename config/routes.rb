@@ -1,4 +1,6 @@
 Timer1::Application.routes.draw do
+  resources :trials
+
   resources :events
 
   # The priority is based upon order of creation:

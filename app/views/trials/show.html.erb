@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @trial.event_id %>
+</p>
+
+<p>
+  <b>Bib:</b>
+  <%= @trial.bib %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @trial.gender %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @trial.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @trial.end %>
+</p>
+
+
+<%= link_to 'Edit', edit_trial_path(@trial) %> |
+<%= link_to 'Back', trials_path %>

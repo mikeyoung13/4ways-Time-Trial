@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  event_id: 1
+  bib: 1
+  gender: MyText
+  start: 2011-03-27 17:47:06
+  end: 2011-03-27 17:47:06
+
+two:
+  event_id: 1
+  bib: 1
+  gender: MyText
+  start: 2011-03-27 17:47:06
+  end: 2011-03-27 17:47:06

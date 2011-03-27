@@ -10,11 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110327210857) do
+ActiveRecord::Schema.define(:version => 20110327214706) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
     t.integer  "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trials", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "bib"
+    t.text     "gender"
+    t.datetime "start"
+    t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
