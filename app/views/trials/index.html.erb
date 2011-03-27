@@ -17,8 +17,8 @@
     <td><%= trial.event_id %></td>
     <td><%= trial.bib %></td>
     <td><%= trial.gender %></td>
-    <td><%= trial.start %></td>
-    <td><%= trial.end %></td>
+    <td><%= formatTime(trial.start) %></td>
+    <td><%= formatTime(trial.end) %></td>
     <td><%= link_to 'Show', trial %></td>
     <td><%= link_to 'Edit', edit_trial_path(trial) %></td>
     <td><%= link_to 'Destroy', trial, :confirm => 'Are you sure?', :method => :delete %></td>
