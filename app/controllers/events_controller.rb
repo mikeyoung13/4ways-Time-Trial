@@ -9,6 +9,16 @@ class EventsController < ApplicationController
       format.xml  { render :xml => @events }
     end
   end
+  
+  def results
+    @event = Event.find(params[:id])
+    @trials = @event.trials
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @event }
+    end
+  end
 
   # GET /events/1
   # GET /events/1.xml

@@ -2,6 +2,10 @@ Timer1::Application.routes.draw do
   resources :trials
 
   resources :events
+  
+  resources :events do
+    get :results, :on => :member
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
