@@ -11,8 +11,12 @@ class EventsController < ApplicationController
   end
   
   def results
+    
+    gender = params[:gender]  
+    #@trials = Trial.where(:event_id => params[:id],:gender => @gender)
+    
     @event = Event.find(params[:id])
-    @trials = @event.trials
+    @trials = @event.trials.where(:gender => gender)
 
     respond_to do |format|
       format.html
