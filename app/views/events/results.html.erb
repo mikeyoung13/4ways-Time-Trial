@@ -1,35 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div data-role = "header">
+	<h4>Results</h4>
+</div>
+<div data-role = "content">
+	Event: <%= @event.title %>
+	<p id         = "notice"><%= notice %></p>
+	<table>
+		<tr>
+			<th>Bib</th>
+			<th>Start</th>
+			<th>End</th>
+		</tr>
 
-<p>
-  <b>Results for <%= @event.title %></b>
-</p>
+		<% @trials.each do |trial| %>
+		<tr>
+			<td><%= trial.bib %></td>
+			<td><%= formatTime(trial.start) %></td>
+			<td><%= formatTime(trial.end) %></td>
+		</tr>
+		<% end %>
 
-<table>
-  <tr>
-    <th>Event</th>
-    <th>Bib</th>
-    <th>Gender</th>
-    <th>Start</th>
-    <th>End</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @trials.each do |trial| %>
-  <tr>
-    <td><%= trial.event_id %></td>
-    <td><%= trial.bib %></td>
-    <td><%= trial.gender %></td>
-    <td><%= formatTime(trial.start) %></td>
-    <td><%= formatTime(trial.end) %></td>
-    <td><%= link_to 'Show', trial %></td>
-    <td><%= link_to 'Edit', edit_trial_path(trial) %></td>
-    <td><%= link_to 'Destroy', trial, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-
-</table>
-
-<%= link_to 'All Events', events_path %>
-
+	</table>
+	<%= link_to 'Home', events_path, :'data-role' => 'button', 'data-ajax' => 'false' %>
+</div>
