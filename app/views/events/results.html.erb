@@ -7,16 +7,16 @@
 	<table class='smallTable'>
 		<tr>
 			<th>Bib</th>
-			<th>Start</th>
-			<th>End</th>
+			<th>Elapsed Time</th>
 		</tr>
 
 		<% @trials.each do |trial| %>
+			<% if !trial.elapsed.nil? %>
 		<tr>
 			<td><%= trial.bib %></td>
-			<td><%= formatTime(trial.start) %></td>
-			<td><%= formatTime(trial.end) %></td>
+			<td><%= formatMinSec(trial.elapsed)%></td>
 		</tr>
+			<% end %>
 		<% end %>
 
 	</table>
