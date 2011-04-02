@@ -38,7 +38,7 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.xml
   def new
-    @event = Event.new
+    #TODO @event = Event.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -54,7 +54,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.xml
   def create
-    @event = Event.new(params[:event])
+    #TODO @event = Event.new(params[:event])
 
     respond_to do |format|
       if @event.save
@@ -70,7 +70,7 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.xml
   def update
-    @event = Event.find(params[:id])
+    #TODO @event = Event.find(params[:id])
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
@@ -86,8 +86,8 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.xml
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
+    #TODO @event = Event.find(params[:id])
+    #TODO @event.destroy
 
     respond_to do |format|
       format.html { redirect_to(events_url) }
