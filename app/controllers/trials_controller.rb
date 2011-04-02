@@ -63,6 +63,16 @@ class TrialsController < ApplicationController
   # PUT /trials/1.xml
   def update
     @trial = Trial.find(params[:id])
+    
+    startTime = Time.zone.parse(params[:trial]["start"])
+    endTime = Time.zone.parse(params[:trial]["end"])
+    
+    if !startTime.nil? && !endTime.nil?
+      elapsedTime = endTime - startTime
+      @trial.elapsed = elapsedTime
+    end
+    
+    #params[:trial]["start"] = '2008-10-10 12:11:10.000'
 
     respond_to do |format|
       if @trial.update_attributes(params[:trial])
