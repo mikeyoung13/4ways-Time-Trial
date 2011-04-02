@@ -1,13 +1,15 @@
 <div data-role="header">
-	<h1>Events</h1>
+	<h1>4 ways</h1>
 </div>
 <div data-role="content">
 	<ul data-role="listview" data-inset="true">
-		<li data-role="list-divider">Men</li>
+		<li data-role="list-divider">Twitter</li>
+		<li><a href="http://search.twitter.com/search?tag=4ways">4ways Twitter Feed</a></li>
+		<li data-role="list-divider">Men's Results</li>
 		<% @events.each do |event| %>
 		<li><%= link_to event.title,results_event_path(event,:gender => 'M') %></li>
 		<% end %>
-		<li data-role="list-divider">Women</li>
+		<li data-role="list-divider">Women's Results</li>
 		<% @events.each do |event| %>
 		<li><%= event.title %><%= link_to "",results_event_path(event,:gender => 'F') %></li>
 		<% end %>
