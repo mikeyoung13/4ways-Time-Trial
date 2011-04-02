@@ -2,7 +2,7 @@ class TrialsController < ApplicationController
   # GET /trials
   # GET /trials.xml
   def index
-    @trials = Trial.all
+    @trials = Trial.all.sort_by(&:created_at).reverse
 
     respond_to do |format|
       format.html # index.html.erb
