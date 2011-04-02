@@ -67,6 +67,8 @@ class TrialsController < ApplicationController
     startTime = Time.zone.parse(params[:trial]["start"])
     endTime = Time.zone.parse(params[:trial]["end"])
     
+    # move to model with before_save.
+    # See http://stackoverflow.com/questions/1424777/how-to-convert-user-input-hours-minutes-seconds
     if !startTime.nil? && !endTime.nil?
       elapsedTime = endTime - startTime
       @trial.elapsed = elapsedTime
