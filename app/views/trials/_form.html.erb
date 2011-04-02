@@ -13,25 +13,26 @@
 
   <div class="field">
     <%= f.label :event_id %><br />
-    <%= f.text_field :event_id %>
+    <%= f.text_field :event_id, :'data-role' => 'none' %>
   </div>
   <div class="field">
     <%= f.label :bib %><br />
-    <%= f.text_field :bib %>
+    <%= f.text_field :bib, :'data-role' => 'none' %>
   </div>
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+    <%= f.select :gender, [:M,:F],
+                  :prompt => 'Select Gender', :'data-role' => 'none' %>
   </div>
   <div class="field">
     <%= f.label :start %><br />
-    <%= f.datetime_select :start %>
+    <%= f.text_field :start, :'data-role' => 'none' %>
   </div>
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.datetime_select :end %>
+    <%= f.text_field :end, :'data-role' => 'none' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :'data-ajax' => 'false'%>
   </div>
 <% end %>

@@ -1,6 +1,10 @@
-<h1>Editing trial</h1>
+<div data-role = "header">
+	<h4>Edit Trial</h4>
+</div>
+<div data-role = "content">
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @trial %> |
-<%= link_to 'Back', trials_path %>
+<%= link_to 'Show', @trial, 'data-ajax' => 'false' %> |
+<%= link_to 'Back', trials_path, 'data-ajax' => 'false' %>
+</div>
