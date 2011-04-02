@@ -16,7 +16,7 @@ module ApplicationHelper
   def formatTime(date)
     
     if !date.nil?
-      date.strftime('%H:%M:%S.%L')
+      date.strftime('%H:%M:%S')
     else
       ""
     end
