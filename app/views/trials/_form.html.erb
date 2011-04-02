@@ -21,17 +21,18 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.select :gender, [:M,:F],
-                  :prompt => 'Select Gender', :'data-role' => 'none' %>
+	<%= f.select(:gender, [:M,:F], {},{:'data-role' => 'none'})%>
   </div>
   <div class="field">
     <%= f.label :start %><br />
-    <%= f.text_field :start, :'data-role' => 'none' %>
+    <%= f.text_field :start, :'data-role' => 'none',:class => 'xxxtimeInput' %>
   </div>
+  <input type="button" name="setTime1" class="setTimeButton2" value="Set End Time">
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.text_field :end, :'data-role' => 'none' %>
+    <%= f.text_field :end, :'data-role' => 'none',:class => 'timeInput' %>
   </div>
+
   <div class="actions">
     <%= f.submit :'data-ajax' => 'false'%>
   </div>

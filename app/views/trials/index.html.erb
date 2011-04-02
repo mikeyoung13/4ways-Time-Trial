@@ -1,31 +1,33 @@
-<h1>Listing trials</h1>
-
-<table>
+<div data-role = "header">
+	<h4>All Trials</h4>
+</div>
+<div data-role = "none">
+<table class='smallTable'>
   <tr>
-    <th>Event</th>
+    <th></th>
     <th>Bib</th>
-    <th>Gender</th>
     <th>Start</th>
     <th>End</th>
-    <th></th>
+    <th>Gender</th>
+    <th>Event</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @trials.each do |trial| %>
   <tr>
-    <td><%= trial.event_id %></td>
+    <td><%= link_to 'Edit', edit_trial_path(trial), 'data-ajax' => 'false' %></td>
     <td><%= trial.bib %></td>
-    <td><%= trial.gender %></td>
     <td><%= formatTime(trial.start) %></td>
     <td><%= formatTime(trial.end) %></td>
+    <td><%= trial.gender %></td>
+    <td><%= trial.event_id %></td>
     <td><%= link_to 'Show', trial, 'data-ajax' => 'false' %></td>
-    <td><%= link_to 'Edit', edit_trial_path(trial), 'data-ajax' => 'false' %></td>
     <td><%= link_to 'Destroy', trial, :confirm => 'Are you sure?', :method => :delete, 'data-ajax' => 'false' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Trial', new_trial_path, 'data-ajax' => 'false' %>
+<%= link_to 'Start a new trial', new_trial_path(:event_id => 1,:mode => 'start'), 'data-ajax' => 'false' %>
+</div>

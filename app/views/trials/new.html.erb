@@ -1,5 +1,30 @@
-<h1>New trial</h1>
+<% if @mode=="start" %>
+<div data-role = "header">
+	<h4>Start</h4>
+</div>
+	<%= form_for(@trial) do |f| %>
+        <ul id="timeList" data-role="listview" data-inset2="true">
+            <li>
+				<%= f.text_field :event_id, :type => 'hidden' %>
+	            <%= f.text_field :bib, :'data-role' => 'none',:class => 'bibInput',:type=>'number',:size=>'10',:min=>'0',:max=>'9999', :placeholder=>'Bib #'%>
 
-<%= render 'form' %>
+			    <%= f.select(:gender, [:M,:F], {},{:'data-role' => 'none'})%>
+
+                <%= f.text_field :start, :'data-role' => 'none',:class => 'timeInput',:size=>'26',:type=>'time',:placeholder=>'YYYY:MM:DD 00:00:00.000'%>
+                <input type="button" name="setTime1" class="setTimeButton" value="Set Time">
+            </li>
+        </ul>
+<br/><br/><br/>
+	  <div class="actions">
+	    <%= f.submit :value => "Send to server", :'data-ajax' => 'false'%>
+	  </div>
+	<% end %>
+
+<% else %>
+<div data-role = "header">
+	<h4>New Trial</h4>
+</div>
+   <%= render 'form' %>
+<% end %>
 
 <%= link_to 'Back', trials_path, 'data-ajax' => 'false' %>

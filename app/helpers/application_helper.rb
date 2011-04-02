@@ -2,7 +2,7 @@ module ApplicationHelper
   def formatTime(date)
     
     if !date.nil?
-      date.in_time_zone('Eastern Time (US & Canada)').strftime('%H:%M:%S.%L')
+      date.strftime('%H:%M:%S.%L')
     else
       ""
     end

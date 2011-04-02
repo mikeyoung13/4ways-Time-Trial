@@ -1,0 +1,9 @@
+.smallTable
+{
+    border-collapse:collapse;
+}
+.smallTable td
+{
+    text-align:center;
+    border: 1px solid black;
+}

@@ -24,7 +24,13 @@ class TrialsController < ApplicationController
   # GET /trials/new
   # GET /trials/new.xml
   def new
+    @mode = params[:mode]
+    @eventID = params[:event_id]
     @trial = Trial.new
+    if !@eventID.nil?
+      @event = Event.find(@eventID)
+      @trial.event_id = @eventID
+    end
 
     respond_to do |format|
       format.html # new.html.erb
