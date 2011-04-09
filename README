@@ -1,3 +1,7 @@
+Rails 3 mobile web app for timing the 4-ways-in-a-day time trail at Big Creek park.  Leverages jQuery Mobile.  Two different uses cases: 1) an admin system for collecting and editing start/end times 2) results reporting.
+
+Tested mostly on iPhone 4.  Limited testing on Android phones looked good also.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
