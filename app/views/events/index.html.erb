@@ -11,7 +11,7 @@
 		<% end %>
 		<li data-role="list-divider">Women's Results</li>
 		<% @events.each do |event| %>
-		<li><%= event.title %><%= link_to "",results_event_path(event,:gender => 'F') %></li>
+		<li><%= link_to event.title,results_event_path(event,:gender => 'F') %></li>
 		<% end %>
 	</ul>
 </div>
